@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".controllers.MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Novo compromisso"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Seção: Novo Compromisso -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:background="#dcdcdc">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:name="com.example.fragmentosdataehora.FragmentoDatePicker"
+                android:id="@+id/fragment_entrada"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <FrameLayout
+                android:name="com.example.fragmentosdataehora.FragmentoTimePicker"
+                android:id="@+id/fragment_visualizacao"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+        </LinearLayout>
+
+        <!-- Linha: Data e Hora -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetLeft="10dp"
+                android:insetRight="10dp"
+                android:onClick="fragmentDatePickerData"
+                android:text="Data" />
+
+            <Button
+                android:id="@+id/btnHora"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetLeft="10dp"
+                android:insetRight="10dp"
+                android:onClick="fragmentTimePickerHora"
+                android:text="Hora" />
+        </LinearLayout>
+
+        <!-- Campo Descrição -->
+        <EditText
+            android:id="@+id/etDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="Descrição"
+            android:padding="12dp" />
+
+        <!-- Campo Almoço -->
+
+        <!-- Botão OK -->
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:onClick="salvarDados"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <!-- Separador -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#512DA8"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/titulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Compromissos:"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Seção de Filtro (Hoje / Outra Data) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnHoje"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="10dp"
+            android:insetRight="10dp"
+            android:onClick="botaoHoje"
+            android:text="Hoje" />
+
+        <Button
+            android:id="@+id/btnOutraData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="10dp"
+            android:insetRight="10dp"
+            android:onClick="fragmentDatePickerOutraData"
+            android:text="Outra Data" />
+    </LinearLayout>
+
+    <!-- Lista de Compromissos -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#dcdcdc">
+
+        <LinearLayout
+            android:id="@+id/listaCompromissos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnLimpar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="10dp"
+            android:insetRight="10dp"
+            android:onClick="limparDia"
+            android:text="Limpar dia" />
+
+        <Button
+            android:id="@+id/btnDeletar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="10dp"
+            android:insetRight="10dp"
+            android:onClick="resetarBD"
+            android:text="Resetar Agenda" />
+    </LinearLayout>
+</LinearLayout>
