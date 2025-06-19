@@ -25,7 +25,19 @@ Aplicativo de agenda desenvolvido em **Java** para Android, utilizando o padrão
 ---
 
 ## Capturas de Tela
+### Tela inicial sem compromissos registrados
+<img src="img/1.jpg" width="300"/>
 
+### Tela inicial com compromissos
+<img src="img/2.jpg" width="300"/>
+
+### Fragment para selecionar a Data ao clicar no botao DATA (registra) e no OUTRA DATA (pesquisa)
+<img src="img/3.jpg" width="300"/>
+
+### Fragment para selecionar o Horário ao clicar no botao HORA
+<img src="img/4.jpg" width="300"/>
+
+Obs: As datas e horário padrão ao abrir os fragments serão o dia e horario atual, e a listagem padrão ao abrir o app também será o dia atual.
 
 ---
 
