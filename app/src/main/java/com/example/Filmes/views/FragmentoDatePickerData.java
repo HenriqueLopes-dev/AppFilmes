@@ -1,4 +1,4 @@
-package com.example.Agenda.views;
+package com.example.Filmes.views;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -9,12 +9,9 @@ import androidx.fragment.app.DialogFragment;
 import android.util.Log;
 import android.widget.DatePicker;
 
-import com.example.Agenda.controllers.MainActivity;
-import com.example.Agenda.models.DaoCompromisso;
-import com.example.Agenda.models.EntityCompromisso;
+import com.example.Filmes.controllers.MainActivity;
 
 import java.util.Calendar;
-import java.util.List;
 
 public class FragmentoDatePickerData extends DialogFragment
         implements DatePickerDialog.OnDateSetListener {
@@ -43,12 +40,12 @@ public class FragmentoDatePickerData extends DialogFragment
         MainActivity activity = (MainActivity) getActivity();
 
         assert activity != null;
-        activity.compromisso.setDia(day);
-        activity.compromisso.setMes(month+1);
-        activity.compromisso.setAno(year);
+        //activity.compromisso.setDia(day);
+        //activity.compromisso.setMes(month+1);
+        //activity.compromisso.setAno(year);
 
-        if (activity.isOutraData){
-            activity.listarOutraDataCompromisso();
-        }
+        //if (activity.isOutraData){
+        //    activity.listarOutraDataCompromisso();
+        //}
     }
 }

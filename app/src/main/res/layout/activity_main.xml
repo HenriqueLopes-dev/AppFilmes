@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Novo compromisso"
+        android:text="Pesquisar Filme"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -48,33 +48,6 @@
 
         </LinearLayout>
 
-        <!-- Linha: Data e Hora -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <Button
-                android:id="@+id/btnData"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:insetLeft="10dp"
-                android:insetRight="10dp"
-                android:onClick="fragmentDatePickerData"
-                android:text="Data" />
-
-            <Button
-                android:id="@+id/btnHora"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:insetLeft="10dp"
-                android:insetRight="10dp"
-                android:onClick="fragmentTimePickerHora"
-                android:text="Hora" />
-        </LinearLayout>
 
         <!-- Campo Descrição -->
         <EditText
@@ -82,17 +55,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:hint="Descrição"
+            android:hint="Nome do filme"
             android:padding="12dp" />
-
-        <!-- Campo Almoço -->
 
         <!-- Botão OK -->
         <Button
             android:id="@+id/btnOk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OK"
+            android:text="pesquisar"
             android:onClick="salvarDados"
             android:layout_gravity="center" />
     </LinearLayout>
@@ -104,15 +75,6 @@
         android:background="#512DA8"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp" />
-
-    <TextView
-        android:id="@+id/titulo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Compromissos:"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 
     <!-- Seção de Filtro (Hoje / Outra Data) -->
     <LinearLayout
@@ -129,7 +91,7 @@
             android:insetLeft="10dp"
             android:insetRight="10dp"
             android:onClick="botaoHoje"
-            android:text="Hoje" />
+            android:text="adicionar lista" />
 
         <Button
             android:id="@+id/btnOutraData"
@@ -139,8 +101,17 @@
             android:insetLeft="10dp"
             android:insetRight="10dp"
             android:onClick="fragmentDatePickerOutraData"
-            android:text="Outra Data" />
+            android:text="ir para lista" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/titulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Filmes:"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <!-- Lista de Compromissos -->
     <ScrollView
@@ -159,11 +130,21 @@
         </LinearLayout>
     </ScrollView>
 
+    <TextView
+        android:id="@+id/titulo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Página x"
+        android:textSize="20sp" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2">
+
 
         <Button
             android:id="@+id/btnLimpar"
@@ -173,7 +154,7 @@
             android:insetLeft="10dp"
             android:insetRight="10dp"
             android:onClick="limparDia"
-            android:text="Limpar dia" />
+            android:text="anterior" />
 
         <Button
             android:id="@+id/btnDeletar"
@@ -183,6 +164,6 @@
             android:insetLeft="10dp"
             android:insetRight="10dp"
             android:onClick="resetarBD"
-            android:text="Resetar Agenda" />
+            android:text="proxima" />
     </LinearLayout>
 </LinearLayout>

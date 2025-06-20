@@ -1,15 +1,14 @@
-package com.example.Agenda.views;
+package com.example.Filmes.views;
 
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.util.Log;
 import android.widget.TimePicker;
 
 import androidx.fragment.app.DialogFragment;
 
-import com.example.Agenda.controllers.MainActivity;
+import com.example.Filmes.controllers.MainActivity;
 
 import java.util.Calendar;
 
@@ -43,7 +42,7 @@ public class FragmentoTimePicker extends DialogFragment
         MainActivity activity = (MainActivity) getActivity();
 
         assert activity != null;
-        activity.compromisso.setHora(hourOfDay);
-        activity.compromisso.setMinuto(minute);
+        //activity.compromisso.setHora(hourOfDay);
+        //activity.compromisso.setMinuto(minute);
     }
 }

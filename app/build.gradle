@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.Agenda'
+    namespace "com.example.Filmes"
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.Agenda"
+        applicationId "com.example.Filmes"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -44,4 +44,5 @@ dependencies {
     implementation "androidx.room:room-guava:$room_version"
     testImplementation "androidx.room:room-testing:$room_version"
     implementation "androidx.room:room-paging:2.4.1"
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
 }
