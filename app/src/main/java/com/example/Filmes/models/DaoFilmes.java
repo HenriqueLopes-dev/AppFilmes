@@ -12,11 +12,11 @@ import java.util.List;
 @Dao
 public interface DaoFilmes {
 
-    @Query("SELECT * FROM filmes")
-    List<Filmes> todos();
+    @Query("SELECT * FROM filmes ORDER BY nota DESC")
+    List<Filmes> filtrarPorNota();
 
-    //@Query("SELECT * FROM filmes WHERE dia = :dia AND mes = :mes AND ano = :ano ORDER BY hora ASC, minuto ASC")
-    //List<Filmes> compromissosPorData(int dia, int mes, int ano);
+    @Query("SELECT * FROM filmes WHERE nome = :nome")
+    List<Filmes> buscarPorNome(String nome);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void inserir(Filmes filmes);
@@ -26,5 +26,4 @@ public interface DaoFilmes {
 
     @Delete
     void deletar(Filmes filmes);
-
 }

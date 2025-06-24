@@ -17,8 +17,7 @@
         android:text="Pesquisar Filme"
         android:textSize="24sp"
         android:textStyle="bold" />
-
-    <!-- Seção: Novo Compromisso -->
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,21 +50,23 @@
 
         <!-- Campo Descrição -->
         <EditText
-            android:id="@+id/etDescricao"
+            android:id="@+id/PesquisaFilme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:hint="Nome do filme"
-            android:padding="12dp" />
+            android:hint="Digite o nome do filme"
+            android:inputType="textCapSentences"
+            android:padding="12dp"
+            android:imeOptions="actionSearch"/>
 
-        <!-- Botão OK -->
+        <!-- Botão de pesquisa -->
         <Button
-            android:id="@+id/btnOk"
+            android:id="@+id/btnPesquisar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="pesquisar"
-            android:onClick="salvarDados"
-            android:layout_gravity="center" />
+            android:text="Pesquisar e Adicionar"
+            android:layout_gravity="center"
+            android:onClick="pesquisarFilme"/>
     </LinearLayout>
 
     <!-- Separador -->
@@ -78,30 +79,37 @@
 
     <!-- Seção de Filtro (Hoje / Outra Data) -->
     <LinearLayout
+        android:id="@+id/linearBotoes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="2">
+        android:padding="8dp">
 
         <Button
-            android:id="@+id/btnHoje"
+            android:id="@+id/btnCatalogo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:insetLeft="10dp"
-            android:insetRight="10dp"
-            android:onClick="botaoHoje"
-            android:text="adicionar lista" />
+            android:insetRight="5dp"
+            android:onClick="botaoCatalogo"
+            android:text="Catálogo" />
 
         <Button
-            android:id="@+id/btnOutraData"
+            android:id="@+id/btnAdicionarRemover"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:insetLeft="10dp"
-            android:insetRight="10dp"
-            android:onClick="fragmentDatePickerOutraData"
-            android:text="ir para lista" />
+            android:insetRight="5dp"
+            android:onClick="botaoAdicionarRemover"
+            android:text="Adicionar" />
+
+        <Button
+            android:id="@+id/btnLista"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Lista"
+            android:onClick="botaoLista" />
     </LinearLayout>
 
     <TextView
@@ -113,7 +121,7 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <!-- Lista de Compromissos -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -145,25 +153,22 @@
         android:orientation="horizontal"
         android:weightSum="2">
 
-
         <Button
-            android:id="@+id/btnLimpar"
+            android:id="@+id/btnAnterior"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:insetLeft="10dp"
-            android:insetRight="10dp"
-            android:onClick="limparDia"
-            android:text="anterior" />
+            android:insetRight="5dp"
+            android:onClick="paginaAnterior"
+            android:text="Anterior" />
 
         <Button
-            android:id="@+id/btnDeletar"
+            android:id="@+id/btnProxima"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:insetLeft="10dp"
-            android:insetRight="10dp"
-            android:onClick="resetarBD"
-            android:text="proxima" />
+            android:insetLeft="5dp"
+            android:onClick="proximaPagina"
+            android:text="Próxima" />
     </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Fundo redondo -->
+    <path
+        android:fillColor="#6570FF"
+        android:pathData="M54,0C83.8,0 108,24.2 108,54s-24.2,54 -54,54S0,83.8 0,54 24.2,0 54,0z" />
+
+    <!-- Corpo da claquete -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M24,40h60v44H24z" />
+
+    <!-- Tampa da claquete -->
+    <path
+        android:fillColor="#AAAAAA"
+        android:pathData="M24,32h60v12H24z" />
+
+    <!-- Listras retas na tampa -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M26,34h8v4h-8z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M38,34h8v4h-8z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M50,34h8v4h-8z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M62,34h8v4h-8z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M74,34h8v4h-8z" />
+
+    <!-- Triângulo de play central -->
+    <path
+        android:fillColor="#6570FF"
+        android:pathData="M48,52l18,10l-18,10z" />
+</vector>

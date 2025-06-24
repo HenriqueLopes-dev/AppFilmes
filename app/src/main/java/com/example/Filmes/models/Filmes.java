@@ -3,19 +3,24 @@ package com.example.Filmes.models;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.util.List;
-
 @Entity
 public class Filmes {
 
-    @PrimaryKey
-    private long  id;
+    @PrimaryKey(autoGenerate = true)
+    private long id;
+
     private float nota;
     private String nome;
     private boolean isSelecionado = false;
 
-   //private List<String> genero;
+    // Construtor vazio obrigatório
+    public Filmes() {}
 
+    // Construtor novo para dados mock
+    public Filmes(String nome, float nota) {
+        this.nome = nome;
+        this.nota = nota;
+    }
 
     public boolean isSelecionado() {
         return isSelecionado;
@@ -48,5 +53,4 @@ public class Filmes {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
 }
