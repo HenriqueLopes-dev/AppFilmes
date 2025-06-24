@@ -1,6 +1,6 @@
 # App de Filmes (Android - Java)
 
-Aplicativo de agenda desenvolvido em **Java** para Android, utilizando o padrão **MVC**, utilizando o Busca em **API REST**, e persistência de dados local com **SQLite** via **Room**.
+Aplicativo de filmes desenvolvido em **Java** para Android, utilizando o padrão **MVC**, utilizando o Busca em **API REST**, e persistência de dados local com **SQLite** via **Room**.
 
 ---
 
