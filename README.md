@@ -1,13 +1,13 @@
-# App de Agenda (Android - Java)
+# App de Filmes (Android - Java)
 
-Aplicativo de agenda desenvolvido em **Java** para Android, utilizando o padrão de arquitetura **MVC**, interface modular com **Fragments**, e persistência de dados local com **SQLite** via **Room**.
+Aplicativo de agenda desenvolvido em **Java** para Android, utilizando o padrão **MVC**, utilizando o Busca em **API REST**, e persistência de dados local com **SQLite** via **Room**.
 
 ---
 
 ## Tecnologias Utilizadas
 
 - **Java (Android SDK)**
-- **Android Fragments**
+- **API de filmes da Netflix**
 - **Room (SQLite)**
 - **Arquitetura MVC**
 
@@ -15,12 +15,12 @@ Aplicativo de agenda desenvolvido em **Java** para Android, utilizando o padrão
 
 ## Funcionalidades
 
-- Adicionar compromissos em qualquer dia e horário
-- Escolha de qual dia visualizar os compromissos (hoje como padrão)
-- Compromissos organizados por horario de forma crescrente
-- Armazenamento local com banco de dados SQLite
-- Interface organizada em Fragments 
-- Feedback ao usuário com mensagens claras
+- Listagem dos filmes disponíveis no catalogo da Netflix via API
+- Paginação dos filmes com botões ANTERIOR e PROXIMA
+- Seleção de multiplos filmes para adicionar na lista
+- Lista dos filmes salvos organizados por nota do IMDB obtido pela mesma API de forma decrescente
+- Armazenamento local com banco de dados SQLite  
+- Pesquisa por nome para adicionar o filme na lista 
 
 ---
 
@@ -44,11 +44,11 @@ Obs: As datas e horário padrão ao abrir os fragments serão o dia e horario at
 ## Autores
 
 - **Henrique Luiz de Almeida Lopes**  
-  [LinkedIn](https://www.linkedin.com/in/) | [GitHub](https://github.com/HenriqueLopes-dev)
-- **Caio Henrique de Paiva**  
-  [LinkedIn](https://www.linkedin.com/in/) | [GitHub](https://github.com/HenriqueLopes-dev)
+  [LinkedIn](https://www.linkedin.com/in/henrique-luiz-almeida-lopes) | [GitHub](https://github.com/HenriqueLopes-dev)
+- **Caio Henrique Carvalho de Paiva**  
+  [LinkedIn](https://www.linkedin.com/in/caio-henrique-carvalho-de-paiva) | [GitHub](https://github.com/Caiopaiva07)
 - **Alexsandro Bueno**  
-  [LinkedIn](https://www.linkedin.com/in/) | [GitHub](https://github.com/HenriqueLopes-dev)
+  [LinkedIn](https://www.linkedin.com/in/alexbueno-dev) | [GitHub](https://github.com/alexbueno-dev)
 
 ---
 
